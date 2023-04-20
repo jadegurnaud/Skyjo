@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Skyjo</title>
+  <link rel="stylesheet" href="skyjo.css" type="text/css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./skyjo.js"></script>
+</head>
+<body>
+  
+
+  <input type="radio" name="btnScreen" id="radio1" checked>
+  
+  <div id="accueil">
+    <h1>Skyjo</h1>
+    <nav>
+      <section>
+        <input type="button" value="CREER UNE PARTIE" id="btnCreerUnePartie">
+      </section>
+      <section>
+        <input type="button" value="REJOINDRE UNE PARTIE" id="btnRejoindreUnePartie">
+      </section>
+    </nav>
+  </div>
+
+  <input type="radio" name="btnScreen" id="radio2">
+  
+  <div id="creerPartie">
+    <h1>Skyjo</h1>
+    <p>Entrez votre pseudo : <br>
+      <input type="text" id="pseudo" placeholder="Tapez ici votre pseudo" size="30">
+    </p>
+    <p>Entrez le nom de la partie : <br>
+      <input type="text" id="nom_partie" placeholder="Tapez ici le nom" size="30">
+    </p>
+    <nav>
+      <section>
+        <input type="button" value="LANCER LA PARTIE" id="btnLancer"> 
+      </section>
+
+      <section>
+        <input type="button" value="REJOINDRE LA PARTIE" id="btnRejoindre">
+      </section>
+      
+      <section>
+        <input type="button" value="ACCUEIL" id="btnAccueil">
+      </section>
+    </nav>
+  </div>
+
+  <input type="radio" name="btnScreen" id="radio3">
+  <div id="jouerPartie">
+
+    <div id="ext-boutton">
+      <input type="button" value="QUITTER LA PARTIE" id="btnQuitter">
+    </div>
+    
+    <div id="ext-plateauxJoueurs"><div id="plateauxJoueurs"></div></div>
+    <div id="ext-btnCommencerPartie" class="div_milieu">
+      <input type="button" value="COMMANCER LA PARTIE" id="btnCommencerPartie">
+    </div>
+      <div id="ext-bas">
+        <div id="chat">
+          <h2>Chat de discussion</h2>
+          <main>
+          </main>
+          <footer>
+              <input type="text" id="monMessage">
+              <input type="button" value="Envoyer" id="btnEnvoyer">
+          </footer>
+        </div>
+        
+        <div id="plateauJoueur" class="div_milieu"></div>
+        <div id="ext-pioche">
+          <div id="piocheDefausse">
+            <div id="pioche" class="carte"></div>
+            <div id="defausse" class="carte"></div>
+          </div>
+          <div id="cartePioche" class="carte"></div>
+        </div>
+      </div>
+      
+      
+    
+  </div>
+
+
+</body>
+</html>

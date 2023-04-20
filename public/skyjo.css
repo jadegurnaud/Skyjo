@@ -1,0 +1,320 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**********************************
+ *	Début de la feuille de style  *
+ **********************************/
+
+ body {
+    font-family: 'Eczar Semibold', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	background: radial-gradient(#00FF00,#099c97);
+ 
+}
+body > div, body > input[type=radio] {
+    display: none;   
+}
+        
+input[type=radio]:checked + div {
+    display: block;   
+}
+
+
+h1{
+	font-size: 110px;
+	position: relative;
+	top: 200px;
+	text-align: center;
+}
+#creerPartie h1, #rejoindrePartie h1{
+	position:fixed;
+	top:100px;
+
+}
+#accueil nav {
+    display: flex;
+    flex-direction: row;
+    height: 780px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#creerPartie nav, #rejoindrePartie nav{
+	display: flex;
+    flex-direction: row;
+    height: 110px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+#creerPartie, #rejoindrePartie{
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	position: relative;
+	top: 280px;
+}
+
+#creerPartie p, #rejoindrePartie{
+    height: 60px;
+}
+
+
+input[type="button"]{
+	background-color: #0ABAB5;
+	border-radius: 10px;
+	border: 4px double #cccccc;
+	color: #eeeeee;
+	text-align: center;
+	font-size: 22px;
+	padding: 20px;
+	width: 300px;
+	cursor: pointer;
+}
+
+
+#creerPartie nav section input[type="button"], #rejoindrePartie nav section input[type="button"]{
+	font-size: 15px;
+	width: 180px;
+	margin: 20px;
+}
+
+#btnLancer{
+	display: none;
+}
+
+#btnRejoindre{
+	display: none;
+}
+
+body.creer #btnLancer, body.rejoindre #btnRejoindre{
+	display: block;
+}
+
+#jouerPartie{
+	margin-left:auto;
+	margin-right:auto;
+	width:auto;
+	width: 100%;
+	height: 100vh;
+	
+	background-color: marron;
+}
+#ext-boutton{
+	width: 100%;
+	height: 5vh;
+}
+
+#btnQuitter{
+	font-size: 15px;
+    float: right;
+	width: 35%;
+	height: 5vh;
+	padding: 5px;
+}
+
+#ext-plateauxJoueurs{
+	width: 100%;
+	height: 30vh;
+}
+#plateauxJoueurs{
+	display: flex;
+	margin: 0 auto;
+	max-width: 97%;
+	height: 30vh;
+}
+
+#ext-bas{
+	/*position: absolute;
+	bottom: 20px;
+	width: 100%;*/
+	display: flex;
+	width: 100%;
+	height: 65vh;
+}
+
+#chat {
+    /*position: absolute;*/
+	margin: auto auto 50px auto;
+    /*bottom: 10px;*/
+    height: 400px;
+    width: 400px;
+    background-color: beige;
+}
+#chat h2{
+    /*position: absolute;*/
+    background-color: inherit;
+    height: 22px;
+    padding: 5px;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+    border-top: inherit;
+    border-left: inherit;
+    border-right: inherit;
+}
+
+
+#chat main {
+    position: relative;
+    height: calc(100% - 30px);
+    width: calc(100% - 5px);
+    background-color: white;
+    overflow-y: scroll;
+    line-height: 1.2;
+}
+#chat footer {
+   /* position: absolute; */
+    bottom: 0;
+    padding: 2px 0 6px 0; 
+    width: calc(100% - 20px);
+    background-color: inherit;
+}
+
+#chat > footer input:first-child {
+    width: 200px;
+    font-size: 12px;
+}
+#chat > footer input:last-child {
+	font-size: 15px;
+    float: right;
+	width: 100px;
+	height: 30px;
+	padding: 5px;
+}
+#plateauJoueur{
+	margin: auto;
+	width: 400px;
+	height: 500px;
+	display: flex;
+}
+
+#ext-pioche{
+	margin: auto;
+	width: 300px;
+	height: 320px;
+}
+
+#piocheDefausse{
+	width: 250px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+
+
+#cartePioche{
+	margin-top:10px;
+}
+
+.carte{
+	width: 100px;
+	height: 150px;
+
+	background-size: 90px 140px;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#div_grille_joueur{
+	margin: auto;
+}
+
+.grid td {
+    vertical-align: middle;
+    text-align: center;
+    /*border: solid 1px #333;*/
+    
+	width: 70px;
+	height: 120px;
+
+	background-size: 60px 110px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#div_grille{
+	margin: auto;
+}
+
+#div_grille .grid td{
+	width: 44px;
+	height: 75px;
+
+	background-size: 34px 65px;
+	
+}
+
+#div_grille p, #div_grille_joueur p{
+	margin-top: 10px;
+	text-align: center;
+}
+
+#chat main .mp {
+    color: darkblue;   
+}
+#chat main .moi {
+    color: green;   
+}
+#chat main .system {
+    color: orange;  
+}
+
+#ext-btnCommencerPartie{
+	width: 50vh;
+	height: 10vh;
+	margin: auto;
+	display: none;
+}
+
+#btnCommencerPartie{
+	display: flex;
+	margin: auto;
+}
